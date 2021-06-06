@@ -1,16 +1,17 @@
 import os
+
 def make_commit(days: int):
     if days < 1:
         return os.system('git push')
     else:
-        dates = f'{days} days ago'
+        #dates = f'{days} days ago'
+        dates = "2021-6-6 10:10:10"
 
         with open('data.txt', 'a') as file:
             file.write(f'{dates}\n')
 
         os.system('git add data.txt')
-
-        os.system('git commit --date="'+dates+'" -m "First Commit"')
+        os.system('git commit --amend --date="'+dates+'" -m "First Commit"')
 
         return days*make_commit(days-1)
 
