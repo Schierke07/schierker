@@ -5,7 +5,7 @@ def make_commit(days: int):
         return os.system('git push')
     else:
         #dates = f'{days} days ago'
-        dates = "2021-6-6 10:10:10"
+        dates = "2021-6-7 10:10:10"
 
         with open('data.txt', 'a') as file:
             file.write(f'{dates}\n')
