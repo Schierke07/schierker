@@ -8,11 +8,11 @@ def make_commit(days: int):
         dates = "2020-6-7 10:10:10"
 
         with open('data.txt', 'a') as file:
-            file.write(f'{1}\n')
+            file.write(f'{dates}\n')
 
         os.system('git add data.txt')
-        os.system('git commit --amend --date="'+dates+'" -m "First Commit"')
+        os.system('git commit --date="'+dates+'" -m "First Commit"')
 
         return days*make_commit(days-1)
 
-make_commit(2)
+make_commit(100)
