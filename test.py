@@ -8,7 +8,7 @@ def make_commit(days: int):
         dates = "2021-6-7 10:10:10"
 
         with open('data.txt', 'a') as file:
-            file.write(f'{dates}\n')
+            file.write(f'{1}\n')
 
         os.system('git add data.txt')
         os.system('git commit --amend --date="'+dates+'" -m "First Commit"')
